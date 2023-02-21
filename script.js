@@ -46,6 +46,14 @@ const renderCalendar = () => {
     liTag += `<li class="inactive">${i - lastDayOfMonth + 1}</li>`;
   }
 
+  if (currMonth < 0 || currMonth > 11) {
+    date = new Date(currYear, currMonth);
+    currYear = date.getFullYear();
+    currMonth = date.getMonth();
+  } else {
+    date = new Date();
+  }
+
   currentDate.innerText = `${months[currMonth]} ${currYear}`;
   daysTag.innerHTML = liTag;
 };
