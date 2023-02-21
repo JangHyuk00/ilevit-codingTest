@@ -33,10 +33,6 @@ const renderCalendar = () => {
   }
 
   for (let i = 1; i <= lastDateOfMonth; i++) {
-    liTag += `<li>${i}</li>`;
-  }
-
-  for (let i = 1; i <= lastDateOfMonth; i++) {
     let isToday =
       i === date.getDate() &&
       currMonth === date.getMonth() &&
